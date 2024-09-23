@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>task 2</title>
+
+  <link rel="stylesheet" href="./stylesheet/style.css">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon">
+
+  <!-- aos animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- google icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primaryColor: '#1EABE2',
+            secondaryColor: '#333647',
+            darkTextColor: '#C1C1C1',
+            sectionColor: '#252734',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="light-theme">
+
+  <header>
+
+    <!-- navigation elements -->
+    <nav>
+
+      <div id="nav" class="flex flex-row-reverse md:flex-row light-theme items-center navbar fixed top-3 right-3 left-3  rounded-full justify-between opacity-95 h-[60px] px-3 md:px-10 z-[500]">
+
+        <!-- nav brand -->
+        <a href="https://github.com/Isaac-8080" target="_blank">
+          <img src="./icons/icons8-github-48.png" class="w-[40px] cursor-pointer" alt="brand-image" srcset="">
+        </a>
+
+        <!-- nav links -->
+        <ul class="flex flex-row md:items-center gap-5 hidden md:flex">
+
+          <li class="ease-in-out duration-300">
+            <a href="#" class="hover:text-primaryColor cursor-pointer">
+              Home
+            </a>
+          </li>
+
+          <li class="ease-in-out duration-300">
+            <a href="#projects" class="hover:text-primaryColor cursor-pointer">
+              Projects
+            </a>
+          </li>
+          
+          <li class="ease-in-out duration-300">
+            <a href="#about" class="hover:text-primaryColor cursor-pointer">
+              About
+            </a>
+          </li>
+          
+          <li class="ease-in-out duration-300">
+            <a href="#skills" class="hover:text-primaryColor cursor-pointer">
+              Skills
+            </a>
+          </li>
+          
+          <li class="ease-in-out duration-300">
+            <a href="#contact" class="hover:text-primaryColor cursor-pointer">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
+        
+        <span class="material-symbols-rounded theme-btn cursor-pointer hidden md:flex">
+          light_mode
+        </span>
+
+        <span class="material-symbols-rounded md:hidden cursor-pointer" id="toggleNavIcon">
+          menu
+        </span>
+        
+      </div>
+
+    </nav>
+
+    <!-- small screens nav -->
+    <nav id="sm-navbar" class="sm-navbar light-theme shadow-lg md:hidden z-[500]">
+
+      <!-- sm nav links -->
+      <ul class="py-5 px-3 md:px-5 flex flex-col gap-5">
+        
+        <li>
+          <div class="flex flex-row items-center justify-between pr-5">
+            <a href="https://github.com/Isaac-8080" target="_blank">
+              <img src="./icons/icons8-github-48.png" class="w-[40px] cursor-pointer" alt="brand-image" srcset="">
+            </a>
+            <span class="exit-nav material-symbols-rounded">close</span>
+          </div>
+        </li>
+        
+        <li class="flex flex-row items-center gap-2 pl-2">
+          <!-- <img src="./icons/home.png" class="w-[20px]" alt="" srcset=""> -->
+          <a href="#" class="exit-nav hover:text-primaryColor cursor-pointer">
+            Home
+          </a>
+        </li>
+
+        <li class="flex flex-row items-center gap-2 pl-2">
+          <!-- <img src="./icons/feature.png" class="w-[20px]" alt="" srcset=""> -->
+          <a href="#projects" class="exit-nav hover:text-primaryColor cursor-pointer">
+            Projects
+          </a>
+        </li>
+        
+        <li class="flex flex-row items-center gap-2 pl-2">
+          <!-- <img src="./icons/info.png" class="w-[20px]" alt="" srcset=""> -->
+          <a href="#about" class="exit-nav hover:text-primaryColor cursor-pointer">
+            About
+          </a>
+        </li>
+        
+        <li class="flex flex-row items-center gap-2 pl-2">
+          <!-- <img src="./icons/service.png" class="w-[20px]" alt="" srcset=""> -->
+          <a href="#skills" class="exit-nav hover:text-primaryColor cursor-pointer">
+            Skills
+          </a>
+        </li>
+
+        <li class="flex flex-row items-center gap-2 pl-2">
+          <!-- <img src="./icons/contact.png" class="w-[20px]" alt="" srcset=""> -->
+          <a href="#contact" class="exit-nav hover:text-primaryColor cursor-pointer">
+            Contact
+          </a>
+        </li>
+
+        <span id="theme-icon" class="material-symbols-rounded theme-btn cursor-pointer ml-2 absolute bottom-20 border p-2 rounded-md">
+          light_mode
+        </span>
+        
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main>
+    
+    <!-- hero section -->
+    <section id="hero-section" class="h-[100dvh] rounded">
+
+      <div class="flex flex-col md:flex-row-reverse items-center justify-center gap-2 h-[100dvh]">
+
+        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="1">
+          <img src="./images/image.png" class="w-[200px] border-[5px] rounded-full" alt="my head shot" srcset="">
+        </div>
+        
+        <div class="px-5 flex flex-col gap-2" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="1">
+          
+          <p class="px-2 bg-[#FFFFFF] w-fit rounded-lg border border-primary animate-bounce text-primaryColor text-[12px] font-medium mt-2">Open to work</p>
+
+          <p class="font-bold text-[20px] text-left">Hey, I'm Isaac</p>
+
+          <h1 class="text-6xl font-black text-[#FFFFFF]">
+            Building Innovative <br> <span class="opacity-95 drop-shadow">Solutions with Code.</span>
+          </h1>
+
+          <h2 class="text-2xl font-black opacity-95 hidden md:flex">
+            Full-stack developer with a passion for creating <br> scalable and efficient software
+          </h2>
+
+          <div class="flex flex-row flex-wrap items-center gap-x-2 gap-y-5">
+
+            <div>
+              <a href="https://www.linkedin.com/in/isaac-opoku-manu?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bsy%2FrhL%2F0St26ZVB00Nfm6A%3D%3D" target="_blank" class="py-2 px-3 hover:bg-primaryColor bg-[#FFFFFF] hover:text-[#FFFFFF] w-fit rounded-3xl border border-primaryColor ease-in-out duration-300  text-primaryColor text-[12px] font-bold">LinkedIn</a>
+            </div>
+
+            <div>
+              <a href="https://gradeone.vercel.app/" class="py-2 px-3 hover:bg-[#FFFFFF] bg-primaryColor w-fit rounded-3xl border border-primaryColor ease-in-out duration-300 hover:text-primaryColor text-[#FFFFFF] text-[12px] font-bold" target="_blank">GradeOne</a>
+            </div>
+
+            <div>
+              <a href="mailto:isaacmanuopoku@gmail.com" class="py-2 px-3 hover:bg-primaryColor bg-[#FFFFFF] hover:text-[#FFFFFF] w-fit rounded-3xl border border-primaryColor ease-in-out duration-300  text-primaryColor text-[12px] font-bold">Email</a>
+            </div>
+            
+            <div>
+              <a href="https://github.com/Isaac-8080" target="_blank" class="py-2 px-3 hover:bg-primaryColor bg-[#FFFFFF] hover:text-[#FFFFFF] w-fit rounded-3xl border border-primaryColor ease-in-out duration-300  text-primaryColor text-[12px] font-bold">Github</a>
+            </div>
+            
+            <a href="./resume/Isaac-Opoku-Manu.pdf" download="Isaac Opoku Manu - Resume" class="flex flex-row items-center gap-1 py-1 px-3 hover:bg-primaryColor bg-[#FFFFFF] hover:text-[#FFFFFF] w-fit rounded-3xl border border-primaryColor ease-in-out duration-300  text-primaryColor text-[12px] font-bold">
+              <span class="material-symbols-rounded">arrow_downward</span>
+              <span>Resume</span>
+            </a>
+
+          </div>
+
+        </div>
+        
+      </div>
+      
+      <a href="#" id="backToTop" class="material-symbols-rounded fixed bottom-5 right-5 font-bold border rounded-full p-2 cursor-pointer z-[1000] hidden light-theme" title="back to top">arrow_upward</a>
+      
+    </section>
+    
+    <!-- projects section -->
+    <span id="projects" class=""></span>
+    <section class="px-5 lg:px-[150px] mt-[50px]">
+
+      <div class="">
+
+        <div class="flex flex-row items-center gap-2" data-aos="zoom-in-out" data-aos-duration="1000">
+          <span class="material-symbols-rounded text-primaryColor font-black text-3xl">
+            new_releases
+          </span>
+          <h3 class="font-black text-3xl">Latest Projects</h3>
+        </div>
+
+        <div class="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-10 md:pl-5">
+
+          <!-- Suncity Ushering Agency -->
+          <div class="w-fit rounded-xl" data-aos="zoom-in-out" data-aos-duration="1000">
+
+            <div class="cursor-pointer drop-shadow-md w-fit">
+              
+              <!-- <div> -->
+                <img src="./images/suncity.png" class="w-[100%] rounded-xl" alt="project-img" srcset="">
+              <!-- </div> -->
+              
+            </div>
+
+            <!-- project name -->
+            <h4 class="mt-3 text-primaryColor font-bold w-fit m-1">Suncity Ushering Agency</h4>
+            
+            <!-- project description -->
+            <div>
+              <p class="font-medium text-[14px] m-1">
+                Developed a responsive website for Suncity Ushering Agency, featuring user-friendly navigation and service listings to enhance their online presence and client engagement.
+                <!-- I developed the website for Suncity Ushering Agency, focusing on a responsive design to showcase their ushering and event services. The project highlights user-friendly navigation, service listings, and an optimized client interaction experience, aimed at boosting their online presence. -->
+              </p>
+            </div>
+              
+            <!-- projects technologies div -->
+            <div class="flex flex-col justify-center m-1">
+              <div class="flex flex-row flex-wrap items-center gap-2 mt-1">
+
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-javascript-48.png" class="w-5" alt="JavaScript icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">JavaScript</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-tailwind-css-48.png" class="w-5" alt="tailwind css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">Tailwind CSS</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-css-48.png" class="w-5" alt="css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">CSS</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-html-48.png" class="w-5" alt="css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">HTML</p>
+                </div>
+  
+              </div>
+
+              <hr class="mt-2 mb-1 w-[150px]">
+
+              <div class="flex flex-row items-center justify-between">
+                
+                <p class="flex flex-row items-center gap-1 text-primaryColor font-bold text-[14px]">
+                  <span class="material-symbols-rounded font-black text-lg">line_end_arrow_notch</span>
+                  <a>Private Repo</a> | <a href="https://suncity-phi.vercel.app/" target="_blank" class="hover:bg-[lightgray] p-1 rounded">Demo</a>
+                </p>
+  
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Eco-R -->
+          <div class="w-fit rounded-xl" data-aos="zoom-in-out" data-aos-duration="1000">
+
+            <div class="cursor-pointer drop-shadow-md w-fit">
+              
+              <!-- <div> -->
+                <img src="./images/eco-r.png" class="w-[100%] rounded-xl" alt="project-img" srcset="">
+              <!-- </div> -->
+              
+            </div>
+
+            <!-- project name -->
+            <h4 class="mt-3 text-primaryColor font-bold w-fit m-1">Eco-R</h4>
+            
+            <!-- project description -->
+            <div>
+              <p class="font-medium text-[14px] m-1">
+                Collaborated on creating the website for Eco-R, which turns waste into sustainable products for a greener planet.
+              </p>
+            </div>
+              
+            <!-- projects technologies div -->
+            <div class="flex flex-col justify-center m-1">
+              <div class="flex flex-row flex-wrap items-center gap-2 mt-1">
+
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-javascript-48.png" class="w-5" alt="JavaScript icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">JavaScript</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-tailwind-css-48.png" class="w-5" alt="tailwind css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">Tailwind CSS</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-css-48.png" class="w-5" alt="css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">CSS</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-html-48.png" class="w-5" alt="css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">HTML</p>
+                </div>
+  
+              </div>
+
+              <hr class="mt-2 mb-1 w-[150px]">
+
+              <div class="flex flex-row items-center justify-between">
+                
+                <p class="flex flex-row items-center gap-1 text-primaryColor font-bold text-[14px]">
+                  <span class="material-symbols-rounded font-black text-lg">line_end_arrow_notch</span>
+                  <a>Private Repo</a> | <a href="https://eco-r-psi.vercel.app/" target="_blank" class="hover:bg-[lightgray] p-1 rounded">Demo</a>
+                </p>
+  
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Darasa Reports -->
+          <div class="w-fit rounded-xl" data-aos="zoom-in-out" data-aos-duration="1000">
+
+            <div class="cursor-pointer drop-shadow-md w-fit">
+              
+              <div>
+                <img src="./images/darasa-reports-img.png" class="w-[100%] rounded-xl" alt="project-img" srcset="">
+              </div>
+              
+            </div>
+
+            <!-- project name -->
+            <h4 class="mt-3 text-primaryColor font-bold m-1">Darasa Reports</h4>
+            
+            <!-- project description -->
+            <div>
+              <p class="font-medium text-[14px] m-1">
+                An intuitive student information system and gradebook for African schools, designed to simplify student data management and enhance educational efficiency.
+              </p>
+            </div>
+              
+            <!-- projects technologies div -->
+            <div class="flex flex-col justify-center m-1">
+              <div class="flex flex-row flex-wrap items-center gap-2 mt-1">
+
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-javascript-48.png" class="w-5" alt="JavaScript icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">JavaScript</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-tailwind-css-48.png" class="w-5" alt="tailwind css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">Tailwind CSS</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-css-48.png" class="w-5" alt="css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">CSS</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-html-48.png" class="w-5" alt="css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">HTML</p>
+                </div>
+  
+              </div>
+
+              <hr class="mt-2 mb-1 w-[150px]">
+
+              <div class="flex flex-row items-center justify-between">
+                
+                <p class="flex flex-row items-center gap-1 text-primaryColor font-bold text-[14px]">
+                  <span class="material-symbols-rounded font-black text-lg">line_end_arrow_notch</span>
+                  <a>Private Repo</a> | <a href="https://darasa-Reports.vercel.app/" target="_blank" class="hover:bg-[lightgray] p-1 rounded">Demo</a>
+                </p>
+  
+              </div>
+
+            </div>
+
+          </div>
+          
+          <!-- GradeOne -->
+          <div class="w-fit rounded-xl" data-aos="zoom-in-out" data-aos-duration="1000">
+
+            <div class="cursor-pointer drop-shadow-md w-fit">
+              
+              <div>
+                <img src="./images/gradeone-img.png" class="w-[100%] rounded-xl" alt="project-img" srcset="">
+              </div>
+              
+            </div>
+
+            <!-- project name -->
+            <h4 class="mt-3 text-[#FFFFFF] font-bold w-fit px-1 bg-primaryColor m-1 rounded">GradeOne</h4>
+            
+            <!-- project description -->
+            <div>
+              <p class="font-medium text-[14px] m-1">
+                An ongoing personal project designed to simplify and enhance learning. GradeOne offers a user-friendly platform with affordable access to a vast collection of educational resources.
+              </p>
+            </div>
+              
+            <!-- projects technologies div -->
+            <div class="flex flex-col justify-center m-1">
+              <div class="flex flex-row flex-wrap items-center gap-2 mt-1">
+
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-javascript-48.png" class="w-5" alt="JavaScript icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">JavaScript</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-tailwind-css-48.png" class="w-5" alt="tailwind css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">Tailwind CSS</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-css-48.png" class="w-5" alt="css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">CSS</p>
+                </div>
+                
+                <div class="flex flex-row items-center gap-1">
+                  <img src="./icons/icons8-html-48.png" class="w-5" alt="css icon" srcset="">
+                  <p class="w-fit text-[10px] font-bold">HTML</p>
+                </div>
+  
+              </div>
+
+              <hr class="mt-2 mb-1 w-[150px]">
+
+              <div class="flex flex-row items-center justify-between">
+                
+                <p class="flex flex-row items-center gap-1 text-primaryColor font-bold text-[14px]">
+                  <span class="material-symbols-rounded font-black text-lg">line_end_arrow_notch</span>
+                  <a>Private Repo</a> | <a href="https://gradeone.vercel.app/" target="_blank" class="hover:bg-[lightgray] p-1 rounded">Demo</a>
+                </p>
+  
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    
+    <!-- About/Education section -->
+    <span id="about" class=""></span>
+    <section class="px-5 lg:px-[150px] mt-[100px]">
+
+      <div class="">
+
+        <div class="flex flex-row items-center gap-2" data-aos="zoom-in-out" data-aos-duration="1000">
+          <span class="material-symbols-rounded text-primaryColor font-black text-3xl">
+            school
+          </span>
+          <h3 class="font-black text-3xl">About | Education</h3>
+        </div>
+
+        <div class="mt-5 mb-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:pl-5">
+
+          <!-- About me container -->
+          <div class="">
+
+            <h4 class="text-primaryColor font-bold" data-aos="zoom-in-out" data-aos-duration="1000">About Me</h4>
+
+            <div class="flex flex-row items-center rounded-2xl cursor-pointer drop-shadow-md" data-aos="zoom-in-out" data-aos-duration="1500">
+
+              <p class="my-3">
+                Passionate software developer with a love for crafting 
+                elegant and efficient solutions. My journey in the world
+                of coding began with a curiosity that quickly turned 
+                into a burning desire to create impactful applications. 
+                With a strong foundation in various programming languages 
+                and a knack for problem-solving, I thrive in dynamic 
+                environments where innovation is key. I believe in continuous 
+                learning and adapting to the ever-evolving tech landscape. 
+                Join me as I embark on new challenges, translating ideas into 
+                lines of code that shape the digital landscape.
+              </p>
+
+            </div>
+
+            <div class="flex flex-row flex-wrap items-center gap-2" data-aos="zoom-in-out" data-aos-duration="1000">
+
+              <div>
+                <a href="https://www.linkedin.com/in/isaac-opoku-manu?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bsy%2FrhL%2F0St26ZVB00Nfm6A%3D%3D" target="_blank" class="py-2 px-3 hover:bg-primaryColor bg-[#FFFFFF] hover:text-[#FFFFFF] w-fit rounded-3xl border border-primaryColor ease-in-out duration-300  text-primaryColor text-[12px] font-bold">LinkedIn</a>
+              </div>
+  
+              <div>
+                <a href="mailto:isaacmanuopoku@gmail.com" class="py-2 px-3 hover:bg-primaryColor bg-[#FFFFFF] hover:text-[#FFFFFF] w-fit rounded-3xl border border-primaryColor ease-in-out duration-300  text-primaryColor text-[12px] font-bold">Email</a>
+              </div>
+              
+              <div>
+                <a href="https://github.com/Isaac-8080" target="_blank" class="py-2 px-3 hover:bg-primaryColor bg-[#FFFFFF] hover:text-[#FFFFFF] w-fit rounded-3xl border border-primaryColor ease-in-out duration-300  text-primaryColor text-[12px] font-bold">Github</a>
+              </div>
+
+              <a href="./resume/Isaac-Opoku-Manu.pdf" download="Isaac Opoku Manu - Resume" class="flex flex-row items-center gap-1 py-1 px-3 hover:bg-primaryColor bg-[#FFFFFF] hover:text-[#FFFFFF] w-fit rounded-3xl border border-primaryColor ease-in-out duration-300  text-primaryColor text-[12px] font-bold">
+                <span class="material-symbols-rounded">arrow_downward</span>
+                <span>Resume</span>
+              </a>
+
+            </div>
+
+          </div>
+          
+          <!-- Education container -->
+          <div class="">
+
+            <h4 class="text-primaryColor font-bold" data-aos="zoom-in-out" data-aos-duration="1000">Education</h4>
+
+            <div class="flex flex-col justify-center rounded-2xl drop-shadow-md" data-aos="zoom-in-out" data-aos-duration="1600">
+
+              <p class="my-3">
+                <a href="https://codetraingh.com/" class="text-primaryColor font-medium" target="_blank">Codetrain Africa</a>
+                <span class="text-[14px]"> — Software Engineering Bootcamp</span>
+              </p>
+              <div class="flex flex-row items-center gap-1">
+                <span class="material-symbols-rounded text-primaryColor text-[16px]">calendar_month</span>
+                <p class="text-[14px] text-primaryColor">May 2024 — Present</p>
+              </div>
+
+            </div>
+            
+            <div class="flex flex-col justify-center rounded-2xl drop-shadow-md" data-aos="zoom-in-out" data-aos-duration="1700">
+
+              <p class="my-3 mt-5">
+                <a href="#" class="font-medium">Codecademy</a>  
+                <span class="text-[14px]"> — JavaScript | CSS | HTML </span>
+              </p>
+              <div class="flex flex-row items-center gap-1">
+                <span class="material-symbols-rounded text-primaryColor text-[16px]">calendar_month</span>
+                <p class="text-[14px] text-primaryColor">May 2024 — Present</p>
+              </div>
+
+            </div>
+
+            <div class="flex flex-col justify-center rounded-2xl drop-shadow-md" data-aos="zoom-in-out" data-aos-duration="1800">
+
+              <p class="my-3 mt-5">
+                <a href="" class="font-medium">W3Schools</a>
+                <span class="text-[14px]"> — JavaScript | Bootstrap CSS | CSS | HTML </span>
+              </p>
+              <div class="flex flex-row items-center gap-1">
+                <span class="material-symbols-rounded text-primaryColor text-[16px]">calendar_month</span>
+                <p class="text-[14px] text-primaryColor">Feb 2020 — Present</p>
+              </div>
+
+            </div>
+
+            <div class="flex flex-col justify-center rounded-2xl drop-shadow-md" data-aos="zoom-in-out" data-aos-duration="1900">
+
+              <p class="my-3 mt-5">
+                <a href="" class="font-medium">SoloLearn</a>
+                <span class="text-[14px]"> — JavaScript | CSS | HTML </span>
+              </p>
+              <div class="flex flex-row items-center gap-1">
+                <span class="material-symbols-rounded text-primaryColor text-[16px]">calendar_month</span>
+                <p class="text-[14px] text-primaryColor">Aug 2019 — Present</p>
+              </div>
+
+            </div>
+
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Skills/Technologies section -->
+    <span id="skills" class=""></span>
+
+    <section class="px-5 lg:px-[150px] mt-[100px]">
+
+      <div class="">
+
+        <div class="flex flex-row items-center gap-2" data-aos="zoom-in-out" data-aos-duration="1000">
+          <span class="material-symbols-rounded text-primaryColor font-black text-3xl">
+            sync_alt
+          </span>
+          <h3 class="font-black text-3xl">Skills | Technologies</h3>
+        </div>
+
+        <div class="mt-5 mb-10 grid grid-cols-1 md:grid-cols-3 gap-5 md:pl-5">
+
+          <!-- Programming Languages container -->
+          <div class="w-fit">
+
+            <h4 class="text-primaryColor font-bold" data-aos="zoom-in-out" data-aos-duration="1000">Languages</h4>
+            <div class="flex flex-row items-center rounded-2xl cursor-pointer drop-shadow-md">
+
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-javascript-48.png" class="w-7" alt="JavaScript logo" rcset="">
+                <span>JavaScript</span>
+              </div>
+
+            </div>
+
+            <div class="flex flex-row items-center rounded-2xl cursor-pointer drop-shadow-md">
+
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-css-48.png" class="w-7" alt="css logo" rcset="">
+                <span>CSS</span>
+              </div>
+
+            </div>
+
+            <div class="flex flex-row items-center rounded-2xl cursor-pointer drop-shadow-md">
+
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-html-48.png" class="w-7" alt="html logo" rcset="">
+                <span>HTML</span>
+              </div>
+
+            </div>
+
+          </div>
+          
+          <!-- Development Frameworks container -->
+          <div class="w-fit">
+
+            <h4 class="text-primaryColor font-bold" data-aos="zoom-in-out" data-aos-duration="1000">Development Frameworks</h4>
+            <div class="cursor-pointer drop-shadow-md">
+
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-tailwind-css-48.png" class="w-7" alt="JavaScript logo" rcset="">
+                <span>Tailwind CSS</span>
+              </div>
+              
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-bootstrap-48.png" class="w-7" alt="Bootstrap logo" rcset="">
+                <span>Bootstrap</span>
+              </div>
+
+            </div>
+
+          </div>
+          
+          <!-- Operating Systems container -->
+          <div class="w-fit">
+
+            <h4 class="text-primaryColor font-bold" data-aos="zoom-in-out" data-aos-duration="1000">Operating Systems</h4>
+            <div class="cursor-pointer drop-shadow-md">
+
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-windows-48.png" class="w-7" alt="Windows logo" rcset="">
+                <span>Windows</span>
+              </div>
+              
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-linux-48.png" class="w-7" alt="Linux logo" rcset="">
+                <span>Linux</span>
+              </div>
+
+            </div>
+
+          </div>
+          
+          <!-- Tools and Softwares container -->
+          <div class="w-fit">
+
+            <h4 class="text-primaryColor font-bold" data-aos="zoom-in-out" data-aos-duration="1000">Tools and Softwares</h4>
+            <div class="cursor-pointer drop-shadow-md">
+
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-git-48.png" class="w-7" alt="git logo" rcset="">
+                <span>Git</span>
+              </div>
+              
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-github-48.png" class="w-7" alt="github logo" rcset="">
+                <span>Github</span>
+              </div>
+
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-vs-code-48.png" class="w-7" alt="vs code logo" rcset="">
+                <span>Visual Studio Code</span>
+              </div>
+
+            </div>
+
+          </div>
+          
+          <div class="w-fit">
+
+            <h4 class="text-primaryColor font-bold" data-aos="zoom-in-out" data-aos-duration="1000">Deployments</h4>
+            <div class="cursor-pointer drop-shadow-md">
+
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-triangle-64.png" class="w-7 -rotate-90" alt="vercel logo" rcset="">
+                <span>Vercel</span>
+              </div>
+              
+              <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-github-48.png" class="w-7" alt="github logo" rcset="">
+                <span>Github Pages</span>
+              </div>
+
+              <!-- <div class="my-3 flex flex-row items-center gap-1">
+                <img src="./icons/icons8-vs-code-48.png" class="w-7" alt="vs code logo" rcset="">
+                <span>Netlify</span>
+              </div> -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Reviews section -->
+    <section class="px-5 lg:px-[150px] mt-[100px]">
+
+      <div class="">
+
+        <div class="flex flex-row items-center gap-2" data-aos="zoom-in-out" data-aos-duration="1000">
+          <span class="material-symbols-rounded text-primaryColor font-black text-3xl">
+            format_quote
+          </span>
+          <h3 class="font-black text-3xl">Reviews</h3>
+        </div>
+
+        <!-- <p class="text-primaryColor font-bold uppercase text-[12px]">What Customers Say</p> -->
+
+        <div class="flex flex-row overflow-x-auto scrollbar-hidden items-center gap-3 mt-5">
+
+          <div class="flex-none w-[400px] h-[220px] p-4 rounded-lg bg-secondaryColor text-[#FFFFFF] md:shadow-2xl italic">
+            "Isaac is not only a talented developer but also reliable and great at keeping us updated throughout the project. His skills in JavaScript, React, and database management were key to the success of our project. We’re looking forward to working with him again on future projects."
+          </div>
+          
+          <div class="flex-none w-[400px] h-[220px] p-4 rounded-lg bg-darkTextColor text-[#111] md:shadow-2xl italic">
+            "Isaac is not only a talented developer but also reliable and great at keeping us updated throughout the project. His skills in JavaScript, React, and database management were key to the success of our project. We’re looking forward to working with him again on future projects."
+          </div>
+          
+          <div class="flex-none w-[400px] h-[220px] p-4 rounded-lg bg-[#F1F1F1] text-[#111] md:shadow-2xl italic">
+            "Isaac is not only a talented developer but also reliable and great at keeping us updated throughout the project. His skills in JavaScript, React, and database management were key to the success of our project. We’re looking forward to working with him again on future projects."
+          </div>
+
+        </div>
+
+        <div class="flex flex-row items-center justify-center gap-3 text-red-500">
+          &LeftArrow;
+          <p class="text-center text-red-500 font-bold">Scrollable</p>
+          <!-- &RightArrow; -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Contact section -->
+    <span id="contact" class=""></span>
+    <section class="px-5 lg:px-[100px] mt-[100px] bg-secondaryColor py-20 text-darkTextColor">
+
+      <div class="">
+
+        <div class="flex flex-row items-center gap-2" data-aos="zoom-in-out" data-aos-duration="1000">
+          <span class="material-symbols-rounded text-primaryColor font-black text-3xl">
+            contacts_product
+          </span>
+          <h3 class="font-black text-3xl">Contact</h3>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:items-center md:gap-10 mt-5">
+
+          <img src="./images/contact.us_-1-500x484.png" class="object-cover w-[30%] rounded-2xl hidden md:flex" alt="" srcset="">
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-5">
+  
+            <div class="flex flex-row items-center gap-3 mt-5">
+              <a href="mailto:isaacmanuopoku@gmail.com" class="p-1 bg-[#FFFFFF] w-fit rounded-3xl border border-primaryColor text-primaryColor text-[12px] font-bold"><img src="./icons/icons8-gmail-48.png" class="w-[30px]" alt="" srcset=""></a>
+              <span>
+                <p class="">Email Address</p>
+                <a href="mailto:isaacmanuopoku@gmail.com" class="hover:text-primaryColor">isaacmanuopoku@gmail.com</a>
+              </span>
+            </div>
+  
+            <div class="flex flex-row items-center gap-3 mt-5">
+              <a href="tel:+233596811978" class="p-1 bg-[#FFFFFF] w-fit rounded-3xl border border-primaryColor text-primaryColor text-[12px] font-bold"><img src="./icons/icons8-phone-number-64.png" class="w-[30px]" alt="" srcset=""></a>
+              <span>
+                <p class="">Telephone</p>
+                <a href="tel:+233596811978" class="hover:text-primaryColor">+233 (0) 596811978</a>
+              </span>
+            </div>
+  
+            <div class="flex flex-row items-center gap-3 mt-5">
+              <a href="https://www.linkedin.com/in/isaac-opoku-manu?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bsy%2FrhL%2F0St26ZVB00Nfm6A%3D%3D" target="_blank" class="p-1 bg-[#FFFFFF] w-fit rounded-3xl border border-primaryColor text-primaryColor text-[12px] font-bold"><img src="./icons/icons8-linked-in-48.png" class="w-[30px]" alt="" srcset=""></a>
+              <span>
+                <p class="">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/isaac-opoku-manu?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bsy%2FrhL%2F0St26ZVB00Nfm6A%3D%3D" class="hover:text-primaryColor">Isaac Opoku</a>
+              </span>
+            </div>
+            
+            <div class="flex flex-row items-center gap-3 mt-5">
+              <a href="https://github.com/Isaac-8080" target="_blank" class="">
+                <img src="./icons/icons8-github-48.png" alt="github logo" srcset="" title="github account">
+              </a>
+              <span>
+                <p class="">Github</p>
+                <a href="https://github.com/Isaac-8080" class="hover:text-primaryColor">Isaac Opoku</a>
+              </span>
+            </div>
+  
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="px-5 lg:px-[150px] bg-secondaryColo py-20">
+        
+    <div class="flex flex-col items-center gap-5">
+      
+      <a href="https://github.com/Isaac-8080" target="_blank" class="hover:translate-y-2 ease-in-out duration-300">
+        <img src="./icons/icons8-github-48.png" alt="github logo" srcset="" title="github account">
+      </a>
+
+      <div>
+        <p class="text-darkTextColor text-medium"><span class="font-bold">Thanks for scrolling.</span> Can't wait to here form you!</p>
+      </div>
+
+      <div class="flex flex-row flex-wrap items-center gap-3">
+
+        <a href="https://www.linkedin.com/in/isaac-opoku-manu?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bsy%2FrhL%2F0St26ZVB00Nfm6A%3D%3D" target="_blank" class="p-1 hover:bg-[lightgray] bg-[#FFFFFF] w-fit hover:translate-y-1 ease-in-out duration-200 rounded-3xl border border-primaryColor text-primaryColor text-[12px] font-bold"><img src="./icons/icons8-linked-in-48.png" class="w-[30px] " alt="" srcset=""></a>
+
+        <a href="mailto:isaacmanuopoku@gmail.com" class="p-1 hover:bg-[lightgray] bg-[#FFFFFF] w-fit hover:translate-y-1 ease-in-out duration-200 rounded-3xl border border-primaryColor text-primaryColor text-[12px] font-bold"><img src="./icons/icons8-gmail-48.png" class="w-[30px]" alt="" srcset=""></a>
+
+      </div>
+
+    </div>
+
+  </footer>
+  
+  <script src="./script/main.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+      AOS.init();
+  </script>
+
+</body>
+</html>
